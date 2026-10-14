@@ -1,2 +1,2 @@
-# JUSTICE-KP-Sytem
+# JUSTICE-KP-System
 Justice KP!
