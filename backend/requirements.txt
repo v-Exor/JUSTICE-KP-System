@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+python-multipart
+faster-whisper
+sqlalchemy
+alembic
+pydantic
+ffmpeg-python
+python-dotenv
+reportlab>=4.2,<5
+huggingface-hub<1.0
+cryptography
+psycopg[binary]
+pyannote.audio==4.0.2

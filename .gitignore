@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Node / Next.js
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
+
+# Environment and secrets
+.env
+.env.*
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*
+!.env.production.example
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Runtime logs
+*.log
+backend/logs/
+
+# Uploaded/generated local data
+backend/uploads/
+backend/transcripts/
+backend/consent_uploads/
+backend/evidence_uploads/
+backend/generated_forms/
+backend/generated_forms_test/
+backend/backups/
+backend/tmp_test_evidence/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+
+
+# Large AI model files
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.safetensors
+*.gguf
+
+# Audio and video files
+*.wav
+*.mp3
+*.m4a
+*.mp4
+*.webm
+
+# Archives and temporary files
+*.zip
+*.rar
+*.7z
+*.tmp
+
+# Windows system files
+Thumbs.db
+.DS_Store
+
+# Justice-KP local and generated data
+backend/backups/
+backend/generated_forms/
+backend/generated_forms_test/
+backend/tmp_test_evidence/

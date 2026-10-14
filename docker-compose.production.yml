@@ -1,0 +1,43 @@
+services:
+  postgres:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: justicekp
+      POSTGRES_USER: justicekp
+      POSTGRES_PASSWORD: CHANGE_ME
+    volumes:
+      - justicekp_pgdata:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:5432:5432"
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    depends_on:
+      - postgres
+    volumes:
+      - justicekp_data:/app/backend/data
+      - justicekp_backups:/app/backend/backups
+    ports:
+      - "127.0.0.1:8000:8000"
+    command: sh -c "alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port 8000"
+
+  frontend:
+    build:
+      context: ./frontend
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: http://127.0.0.1:8000
+    ports:
+      - "3000:3000"
+    command: npm run start
+
+volumes:
+  justicekp_pgdata:
+  justicekp_data:
+  justicekp_backups:

@@ -1,0 +1,28 @@
+{
+  "name": "justice-kp",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "jspdf": "^4.2.1",
+    "lucide-react": "^1.17.0",
+    "next": "^15.5.18",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.6",
+    "postcss": "^8",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^5"
+  }
+}
