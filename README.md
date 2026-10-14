@@ -1,4 +1,4 @@
-# JUSTICE-KP Phase 3
+# JUSTICE-KP Phases
 
 Working thesis prototype for Katarungang Pambarangay hearing transcription, deterministic Phase 2 case analysis, and Phase 3 case decision-support workflow.
 
